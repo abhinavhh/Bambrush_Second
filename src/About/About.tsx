@@ -1,4 +1,4 @@
-import Footer from "../components/footer";
+
 import './About.css'
 
 export default function About() {
