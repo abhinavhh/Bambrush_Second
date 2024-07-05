@@ -3,6 +3,7 @@ import Home from './Home/home';
 import About from './About/About';
 import Navbar from './components/navbar';
 import './App.css'
+import Footer from './components/footer';
 export default function App() {
   return (
     <Router>
@@ -11,6 +12,7 @@ export default function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

@@ -1,7 +1,6 @@
 // Home.tsx
 
 import { useEffect, useRef } from 'react';
-import Footer from '../components/footer';
 import image2 from '../assets/pexels-cottonbro-3737585.jpg';
 import image1 from '../assets/pexels-marcus-aurelius-9788574.jpg'; // Replace with actual image path
 import image3 from '../assets/pexels-mikhail-nilov-7814625.jpg'; // Replace with actual image path
@@ -80,7 +79,6 @@ export default function Home() {
           </div>
         ))}
       </div>
-      <Footer />
     </>
   );
 }

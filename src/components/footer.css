@@ -63,7 +63,7 @@ ul li a {
 }
 
 ul li a:hover {
-    text-decoration: underline;
+    color:rgb(223, 148, 10)
 }
 
 /* Footer bottom section */
