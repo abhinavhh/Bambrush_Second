@@ -52,7 +52,7 @@ export default function Home() {
 
     // Attach scroll event listener
     window.addEventListener('scroll', handleScroll);
-    // Clean up event listener on component unmount
+    // Clean up event listconstener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -66,6 +66,10 @@ export default function Home() {
           <h3>Introducing Bamboo Toothbrush - The Sustainable Alternative to Plastic Toothbrushes</h3>
         </div>
       </section>
+      <div className='divide-text'>
+        <p>eco-friendly alternative to traditional plastic toothpastes</p>
+        <p>Our Products: Safe & featuring a biodegradable handle made from sustainable bamboo</p>
+      </div>
       <div className="main-content">
         {featuresData.map((feature, index) => (
           <div key={index} id={`feature-${index}`} className="features animate-fadeInRight">

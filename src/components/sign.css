@@ -1,0 +1,35 @@
+/* .container
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+} */
+h4{
+    padding-bottom: 1em;
+}
+.login{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3em 0em 5em 0em;
+    border-radius: 10px;
+    justify-content: space-around;
+    background-color: rgba(105,105,105,0.2)
+}
+.items{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+input{
+    border: 0px;
+    border-radius: 6px;
+    margin: 0em 1em;
+    padding: 0em 1em;
+}
+
+input[type="button"]{
+    background-color: rgb(3, 73, 9);
+    color: white;
+}

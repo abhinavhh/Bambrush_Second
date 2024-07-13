@@ -1,52 +1,45 @@
 /* Footer container */
-footer {
-    background-color: rgb(21, 85, 2);
-    color: white;
-    padding: 2em 0;
+.footer-first-container{
+    background-color: rgb(20, 68, 6);
+    padding: 2em 1em;
+    display: flex;
+    justify-content: space-around;
 }
-
+.footer-second-container{
+    display: flex;
+    text-align: center;
+}
+.footer-column{
+    padding: 0em 4em;
+}
+.logo-column{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo-text{
+    color: white;
+    margin: 0;
+    text-align: center;
+}
 /* Footer sections */
 .footer-section {
     padding: 1em;
 }
 
-.footer-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 0.5em;
-}
-
 .social-icons {
     display: flex;
+    flex-direction: column;
 }
 
 .social-icons a {
     color: white;
     font-size: 1.2em;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
     text-decoration: none;
 }
 
-.social-icons a img {
-    width: 30px;
-    /* Adjust size as needed */
-    height: 30px;
-    /* Adjust size as needed */
-    margin-right: 5px;
-    border-radius: 50%;
-    /* Makes the image circular */
-}
-
-.social-icons a i {
-    font-size: 1.2em;
-}
-
 /* Terms and policies section */
-h3 {
-    font-size: 1.2em;
-    margin-bottom: 0.5em;
-}
 
 ul {
     list-style-type: none;
@@ -63,12 +56,12 @@ ul li a {
 }
 
 ul li a:hover {
-    color:rgb(223, 148, 10)
+    color:rgb(223, 148, 10);
 }
 
 /* Footer bottom section */
 .footer-bottom {
-    background-color: rgb(12, 209, 55);
+    background-color: rgb(8, 29, 13);
     text-align: center;
     padding: 1em 0;
 }
@@ -77,4 +70,21 @@ ul li a:hover {
     margin: 0;
     font-size: 0.8em;
     color: white;
+}
+@media (max-width:835px){
+    .footer-first-container{
+        padding: 2em 4em;
+    }
+    .footer-column{
+        padding:0px 6px;
+    }
+}
+@media (max-width:680px){
+    .footer-first-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-column{
+        padding:0em 4px;
+    }
 }

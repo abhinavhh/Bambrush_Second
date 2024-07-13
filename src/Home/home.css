@@ -5,32 +5,31 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
   }
   
   /* Container styles */
-  .container {
-    padding: 2em;
+  .container{
+    display: flex;
+    flex-direction: column;
+    padding: 0em 3em;
+    max-width: 50%;
   }
-  
   .container h1 {
     color: rgb(21, 85, 2);
     font-size: 3em;
+    margin-bottom: 0em;
   }
-  
+  .container h3{
+    margin-top: 0em;
+  }
   /* Card container styles */
   .card-container {
-    padding: 3em 0;
+    padding: 7em 0em;
     background-image: url('../assets/pexels-karolina-grabowska-4202926.jpg');
-    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center;
-    align-items: center;
-    text-align: center; */
+    background-size: cover;
+    height: 50vh;
   }
   
   .card-container h1 {
@@ -42,103 +41,112 @@ body {
     font-size: 1.5em;
     font-weight: 400;
   }
-  
+
   /* Image styles */
-  .image-field {
-    padding: 1em 1em;
+  .image-field{
     display: flex;
     justify-content: center;
-    align-items: center;
-    /* margin-bottom: 2em; */
   }
-  
   .image-field img {
     max-width: 300px;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    box-shadow: 0px 10px 10px rgba(10, 10, 10, 0.1);
+    margin-top: 1em;
+  }
+  .divide-text{
+    text-align: center;
+    font-size: medium;
+    margin-top: 2em;
+    margin-bottom: 0;
   }
   /* Main content styles */
   .main-content {
     display: flex;
-    flex-direction: column;
-    gap: 2em;
-    padding: 2em 0;
+    justify-content: space-around;
+    margin: 5em 5em 6em 4em;
   }
   
   /* Features section styles */
   .features {
     display: flex;
-    justify-content: space-between;
-    border: 1px solid rgb(247, 244, 244);
+    flex-direction: column;
+    max-width: 30.33%;
     border-radius: 1em;
-    margin: 0 3em;
     opacity: 0; /* Initial opacity for fade-in animation */
     transform: translateY(20px); /* Initial position for translateY animation */
     transition: opacity 0.5s ease, transform 0.5s ease;
+    /* box-shadow: 0px 2px 5px 0px; */
+  }
+  .features:hover{
+    box-shadow: 0px 4px 10px 0px;
+    transition: 0.2s;
   }
   .features-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
     font-size: larger;
-    padding: 0em 1em;
+    padding: 0em 2em;
   }
   .features-container h2{
-    margin-bottom: 0;
+    margin-bottom: 8px;
   }
   .animate-fadeInLeft {
     opacity: 1;
     transform: translateY(0);
   }
-  
   .animate-fadeInUp {
     opacity: 1;
     transform: scale(1);
   }
-  .features{
-    display: flex;
-  }
-  /* Section styles */
-  .first-section,
-  .second-section,
-  .third-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 2em;
-    margin: 2em 0;
-    padding: 2em;
-    border: 1px solid white;
-    border-radius: 10px;
-  }
+
   
   /* Responsive styles */
-  @media (max-width: 900px) {
-    .features
-     {
+  @media (max-width:1095px){
+    .features{
+      flex-direction: row;
+      max-width: 100%;
+      margin:1em 0em;
+    }
+    .main-content{
       flex-direction: column;
+      
+      margin: 0;
+      padding: 1em 3em;
+    }
+    .image-field img{
+      margin-top: 0;
     }
     .features-container{
-        display: inline;
-        text-align: center;
-    }
-    .card-container {
-      padding: 2em;
-    }
-    .image-field img{
-        max-width: 60%;
-    }
-    .image-field img:hover{
-        max-width: 65%;
+      padding: 0 1em;
+      text-align: justify;
     }
   }
-  @media (max-width:680px){
-    .image-field img{
-        max-width: 100%;
+  @media (max-width:832px){
+    .features{
+      flex-direction: column;
     }
-    .image-field img:hover{
-        max-width: 100%;
+    .image-field img{
+      max-width: 80%;
+      margin-top: 1em;
+    }
+    .container{
+      max-width: 100%;
+    }
+    .features-container{
+      text-align: justify;
+    }
+    .features-container h2{
+      text-align: center;
+      padding: 0 1em;
+      margin-bottom: 7px;
+    }
+    .features-container p{
+      padding: 0 1em;
+    }
+    .card-container{
+      height: 50vh;
+      padding-top:1em;
+    }
+    .divide-text{
+      padding: 0em 1em;
     }
   }
-  
