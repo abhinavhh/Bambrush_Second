@@ -8,7 +8,7 @@ import Sign from './components/sign';
 import Contact from './components/contact';
 export default function App() {
   return (
-    <Router basename="/Bambrush_Second">
+    <Router basename="Bambrush_Second">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
