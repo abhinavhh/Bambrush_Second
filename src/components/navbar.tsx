@@ -7,7 +7,12 @@ import Image_list from '../assets/list-task.svg'
 function Navbar() {
 
     const [isDropdown, setDropdown] = useState(false);
+    const navRef = useRef<HTMLUListElement>(null);
+    const [isOpen, setisOpen] = useState(false)
 
+    const togglebar = () => {
+        setisOpen(!isOpen);
+    }
 
     function handleMouseEnter() {
         setDropdown(true);
@@ -20,21 +25,15 @@ function Navbar() {
         return (
             <div className="dropdown" onMouseEnter={handleMouseEnter}>
                 <li>
-                    <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""} onClick={togglebar}>About</NavLink>
                 </li>
                 <li>
-                    <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>Contact</NavLink>
+                    <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""} onClick={togglebar}>Contact</NavLink>
                 </li>
             </div>
         );
     }
-
-    const navRef = useRef<HTMLUListElement>(null);
-    const [isOpen, setisOpen] = useState(false)
-
-    const togglebar = () => {
-        setisOpen(!isOpen);
-    }
+    
     // const inversetoggle = () => {
     //     setisOpen(!isOpen);
     // }
@@ -53,11 +52,11 @@ function Navbar() {
                 <div className={`nav-container ${isOpen ? 'open' : ''}`} onMouseLeave={togglebar}>
                     <ul ref={navRef} className={`nav-list ${isOpen ? 'show' : ''}`}>
                         <li className="nav-item">
-                            <NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
+                            <NavLink to="/home" className={({ isActive }) => isActive ? "active" : "" }onClick={togglebar}>Home</NavLink>
                         </li>
 
                         <li className="nav-item">
-                            <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>Products</NavLink>
+                            <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""} onCLick={togglebar}>Products</NavLink>
                         </li>
 
                         <li>
