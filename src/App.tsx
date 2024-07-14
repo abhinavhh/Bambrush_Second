@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Home/home';
 import About from './About/About';
 import Navbar from './components/navbar';
@@ -8,7 +8,7 @@ import Sign from './components/sign';
 import Contact from './components/contact';
 export default function App() {
   return (
-    <Router basename="Bambrush_Second">
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
