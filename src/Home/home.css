@@ -125,14 +125,16 @@ body {
       flex-direction: column;
     }
     .image-field img{
-      max-width: 80%;
-      margin-top: 1em;
+      max-width: 100%;
+      border-radius: 1em 1em 0em 0em;
+      /* margin-top: 1em; */
     }
     .container{
       max-width: 100%;
     }
     .features-container{
       text-align: justify;
+      padding: 0em 0em;
     }
     .features-container h2{
       text-align: center;
