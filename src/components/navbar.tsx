@@ -46,11 +46,11 @@ function Navbar() {
             </div>
             <div className="drop-down-list">
                 <li>
-                    <button className="nav-toggle" onClick={togglebar}>
+                    <button className="nav-toggle" onClick={togglebar} onMouseEnter={togglebar}>
                         <img src={Image_list} alt="Image" />
                     </button>
                 </li>
-                <div className={`nav-container ${isOpen ? 'open' : ''}`}>
+                <div className={`nav-container ${isOpen ? 'open' : ''}`} onMouseLeave={togglebar}>
                     <ul ref={navRef} className={`nav-list ${isOpen ? 'show' : ''}`}>
                         <li className="nav-item">
                             <NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
